@@ -6,10 +6,10 @@
 
 @section("contenido")
     <div class="row">
-        @foreach( $animales as $clave => $animal )
+        @foreach( $animales as  $animal )
             <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
                 <div class="card text-white bg-info" style="width: 21rem;">
-                    <a href="{{ route('animales.show' , $clave ) }}">
+                    <a href="{{ route('animales.show' , $animal->id ) }}">
                         <img class="card-img-top" src="{{asset('assets/imagenes/')}}/{{$animal->imagen}}"
                              style="height:200px"/>
                     </a>
