@@ -6,20 +6,20 @@
 
 @section("contenido")
     <div class="row">
-        @foreach( $arrayAnimales as $clave => $animal )
+        @foreach( $animales as $clave => $animal )
             <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
                 <div class="card text-white bg-info" style="width: 21rem;">
                     <a href="{{ route('animales.show' , $clave ) }}">
-                        <img class="card-img-top" src="{{asset('assets/imagenes/')}}/{{$animal['imagen']}}"
+                        <img class="card-img-top" src="{{asset('assets/imagenes/')}}/{{$animal->imagen}}"
                              style="height:200px"/>
                     </a>
                     <div class="card-body">
-                        <h4 class="card-title text-center">{{$animal['especie']}}</h4>
+                        <h4 class="card-title text-center">{{$animal->especie}}</h4>
                     </div>
                     <ul class="list-group list-group-flush text-dark">
-                        <li class="list-group-item">Alimentacion: {{$animal['alimentacion']}}</li>
-                        <li class="list-group-item">Peso: {{$animal['peso']}}kg</li>
-                        <li class="list-group-item">Altura: {{$animal['altura']}}cm</li>
+                        <li class="list-group-item">Alimentacion: {{$animal->alimentacion}}</li>
+                        <li class="list-group-item">Peso: {{$animal->peso}}kg</li>
+                        <li class="list-group-item">Altura: {{$animal->estatura}}cm</li>
                     </ul>
                 </div>
             </div>
