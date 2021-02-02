@@ -113,5 +113,7 @@ class AnimalSeeder extends Seeder
             $a->save();
         }
         $this->command->info('Tabla animales inicializada con datos');
+
+//        Animal::factory(50)->create();
     }
 }

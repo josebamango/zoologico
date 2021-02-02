@@ -9,7 +9,9 @@ use Carbon\Carbon;
 
 class Animal extends Model
 {
-    protected $table = "Animales";
+    protected $table = "animales";
+    public $timestamps=false;
+
     use HasFactory;
 
     public function getEdad()
